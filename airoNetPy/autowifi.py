@@ -42,4 +42,4 @@ with open('show_run_output.txt', 'w') as file:
 
 
 # close connection
-accessAutoAP.disconnect
+accessAutoAP.disconnect()
