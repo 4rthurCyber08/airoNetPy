@@ -33,8 +33,11 @@ accessAutoAP = ConnectHandler(**aironet)
 accessAutoAP.enable()
 
 #push configurations through global configuration mode
-accessAutoAP.send_config_set(deviceConfig)
+output = accessAutoAP.send_config_set(deviceConfig)
 print('Configuration Successfull!')
+with open('show_run_output.txt', 'w') as file:
+    file.write(output)
+
 
 #close connection
 accessAutoAP.disconnect
