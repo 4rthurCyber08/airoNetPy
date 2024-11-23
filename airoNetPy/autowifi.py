@@ -34,6 +34,7 @@ accessAutoAP.enable()
 
 #push configurations through global configuration mode
 accessAutoAP.send_config_set(deviceConfig)
+print('Configuration Successfull!')
 
 #close connection
 accessAutoAP.disconnect
