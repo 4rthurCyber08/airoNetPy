@@ -2,11 +2,11 @@ import json
 import netmiko
 from netmiko import ConnectHandler
 
-#read json file containing aironet settings
+# read json file containing aironet settings
 with open('autoAP.json', 'r') as file:
     deviceData = json.load(file)
 
-#parse info from json file
+# parse info from json file
 aironet = deviceData['aironetInfo']
 apConfig = deviceData['aironetConfig']
 
@@ -26,18 +26,20 @@ deviceConfig = [
     'exit',
 ]
 
-#connect to the device
+# connect to the device
 accessAutoAP = ConnectHandler(**aironet)
 
-#use enable command to enter privilege exec mode
+# use enable command to enter privilege exec mode
 accessAutoAP.enable()
 
-#push configurations through global configuration mode
+# push configurations through global configuration mode
 output = accessAutoAP.send_config_set(deviceConfig)
 print('Configuration Successfull!')
+
+# create a show run output file
 with open('show_run_output.txt', 'w') as file:
     file.write(output)
 
 
-#close connection
+# close connection
 accessAutoAP.disconnect
