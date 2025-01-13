@@ -1,6 +1,6 @@
 aironetInfo:
     device_type: cisco_ios_telnet
-    host: 10.m.10.3
+    host: "10.m.10.3"
     username: admin
     password: pass
     secret: pass
