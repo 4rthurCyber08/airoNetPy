@@ -1,4 +1,5 @@
 import json
+import yaml
 import netmiko
 from netmiko import ConnectHandler
 
@@ -6,6 +7,10 @@ from netmiko import ConnectHandler
 with open('autoAP-temp.json', 'r') as file:
     deviceData = json.load(file)
 
+# read yaml file
+# with open('autoAP-temp.yml', 'r') as file:
+#     deviceData = yaml.safe_load(file)
+    
 # parse info from json file
 aironet = deviceData['aironetInfo']
 apConfig = deviceData['aironetConfig']
