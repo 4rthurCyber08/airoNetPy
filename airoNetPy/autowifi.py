@@ -7,7 +7,7 @@ from netmiko import ConnectHandler
 with open('autoAP-temp.json', 'r') as file:
     deviceData = json.load(file)
 
-# read yaml file
+# read yaml file containing aironet settings
 # with open('autoAP-temp.yml', 'r') as file:
 #     deviceData = yaml.safe_load(file)
     
