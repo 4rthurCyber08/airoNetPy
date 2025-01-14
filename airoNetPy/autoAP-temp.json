@@ -9,7 +9,7 @@
 
     "aironetConfig": {
         "hostname": "aironet-m",
-        "ssid": "11-welcomeToRivan",
+        "ssid": "m-welcomeToRivan",
         "authentication": "open",
         "key-man": "wpa",
         "wifi-pass": "C1sc0123",
