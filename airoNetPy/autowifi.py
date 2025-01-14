@@ -47,6 +47,7 @@ accessAutoAP.enable()
 # push configurations through global configuration mode
 output = accessAutoAP.send_config_set(deviceConfig)
 print('Configuration Successfull!')
+print(output)
 
 # create a show run output file
 with open('show_run_output.txt', 'w') as file:
